@@ -11,7 +11,7 @@ Then, it builds two URIs:
 * Statistics: `<host>/statistics?json=1`
 * Legacy Stats: `<host>/7.html`
 
-It checks the first statistics URL to see if it exists or not. If the Shoutcast version is 1.x, this URL will return `Invalid resource` as the response, hence falling back to the v1 parser. Otherwise, the v2 parser takes care of the rest.
+When the user calls the `Refresh()` or `RefreshAsync()` functions, it checks the first statistics URL to see if it exists or not. If the Shoutcast version is 1.x, this URL will return `Invalid resource` as the response, hence falling back to the v1 parser. Otherwise, the v2 parser takes care of the rest.
 
 ## Shoutcast v2 parser
 

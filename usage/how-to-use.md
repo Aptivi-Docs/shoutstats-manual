@@ -6,7 +6,7 @@ description: How do you use it?
 
 Using this library is very simple! Just use the `ShoutStats.Core` namespace in any piece of code you want to use the library, as in: `using ShoutStats.Core;`
 
-Once you have the server host name and the port, you can create a new instance of the `ShoutcastServer` class to fetch the following info from the server:
+Once you have the server host name and the port, you can create a new instance of the `ShoutcastServer` class and call either `Refresh()` or `RefreshAsync()` to fetch the following info from the server:
 
 * `ServerHost`
   * Server IP address
@@ -83,3 +83,7 @@ Stream information class, `StreamInfo`, contains the following variables:
   * MIME info for stream, usually audio/mpeg.
 
 You can use this library to make an application that fetches info from your Shoutcast server for analytical purposes.
+
+{% hint style="info" %}
+For web development and other cases where asynchronous code is acceptable, use the Async version of the functions as outlined in the beginning of this page to avoid blocking the main thread.
+{% endhint %}
